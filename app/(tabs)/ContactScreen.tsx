@@ -5,7 +5,6 @@ const ContactScreen = () => {
     return(
         <View>
             <Text>Контакты</Text>
-            <TopBar></TopBar>
         </View>
     )
 }

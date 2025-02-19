@@ -10,32 +10,26 @@ import { StyleSheet } from 'react-native';
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+export default function tabLayout() {
 
-  const [loginId, setLoginId] = useState(false);
-  
-  useEffect(() => {
-    const user = false
-    setLoginId(user)
-    if (user) {
-      router.replace("/(tabs)")
-    }
-  })
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
+  // const [loginId, setLoginId] = useState(false);
+  // useEffect(() => {
+  //   const user = false
+  //   setLoginId(user)
+  //   if (user) {
+  //     router.replace("/(tabs)")
+  //   }
+  // })
 
   return (
-    <Stack />
+    <>
+
+      <Stack>
+        <Stack.Screen name="index" options={{ title: "Главная" }} />
+        <Stack.Screen name="ChatScreen" options={{ title: "Чат" }} />
+        <Stack.Screen name="ContactScreen" options={{ title: "Контакты" }} />
+      </Stack>
+      <TopBar />
+    </>
   );
 }
