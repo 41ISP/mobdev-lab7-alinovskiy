@@ -1,11 +1,12 @@
+import Contact from "@/contact/Contact"
 import TopBar from "@/Shared/ui/TopBar"
-import { View , Text} from "react-native"
+import { View , Text, ScrollView} from "react-native"
 
 const ContactScreen = () => {
     return(
-        <View>
-            
-        </View>
+        <ScrollView>
+          <Contact/>
+        </ScrollView>
     )
 }
 

@@ -18,12 +18,11 @@ export default function RootLayout() {
   });
 
   const [loginId, setLoginId] = useState(" ");
-  const {idUser, addUser} = UserStore();
+  const {idUser} = UserStore();
   
   useEffect(() => {
-    const user = false
-    if (user) {
-      router.replace("/(tabs)")
+    if (idUser.id) {
+      router.replace("/Login")
     }
   })
 
