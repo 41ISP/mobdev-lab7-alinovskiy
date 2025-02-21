@@ -12,7 +12,7 @@ export interface IUserStore {
 }
 
 export interface UserReplece extends IUser {
-    sockedId: string
+    sockedId?: string
 }
 
 export const UserStore = create<IUserStore>()(

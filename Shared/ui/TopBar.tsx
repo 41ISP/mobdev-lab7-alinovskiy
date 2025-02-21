@@ -8,13 +8,13 @@ import { LinearGradient } from 'expo-linear-gradient';
 const TopBar = () => {
     const router = useRouter();
     const PageHistory = () => {
-        router.push('/ChatScreen');
+        router.replace('/ChatScreen');
     }
     const ContactScreen = () => {
-        router.push('/ContactScreen');
+        router.replace('/ContactScreen');
     }
     const Back = () => {
-        router.push('/');
+        router.replace('/');
     }
 return(
 

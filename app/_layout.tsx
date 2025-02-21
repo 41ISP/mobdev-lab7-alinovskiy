@@ -7,6 +7,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { StyleSheet } from 'react-native';
+import { UserStore } from '@/Entitiy/User/Store';
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
@@ -15,11 +17,11 @@ export default function RootLayout() {
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
 
-  const [loginId, setLoginId] = useState(false);
+  const [loginId, setLoginId] = useState(" ");
+  const {idUser, addUser} = UserStore();
   
   useEffect(() => {
     const user = false
-    setLoginId(user)
     if (user) {
       router.replace("/(tabs)")
     }
