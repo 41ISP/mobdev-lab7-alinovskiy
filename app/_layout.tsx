@@ -22,7 +22,7 @@ export default function RootLayout() {
   
   useEffect(() => {
     if (idUser.id) {
-      router.replace("/Login")
+      router.replace("/(tabs)")
     }
   })
 

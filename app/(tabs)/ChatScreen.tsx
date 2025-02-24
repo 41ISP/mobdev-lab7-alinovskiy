@@ -4,12 +4,22 @@ import { StyleSheet } from 'react-native';
 const ChatScreen = () => {
 return(
     
-    <View >
-     
-    </View>
+    <ScrollView style={styles.view}>
+     <View>
+        <Text>12321</Text>
+     </View>
+     <View>
+     <Text>12321</Text>
+     </View>
+    </ScrollView>
    
    
 )
 }
+const styles = StyleSheet.create({
+    view: {
+        backgroundColor: "rgb(201, 132, 42)",
+    }
+})
 
 export default ChatScreen
