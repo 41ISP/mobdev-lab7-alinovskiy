@@ -1,24 +1,16 @@
+import { UserStore } from "@/Entitiy/User/Store";
 import { Image, Text, View } from "react-native";
 import { StyleSheet } from 'react-native';
 
 
-
-const Contact = () => {
+const Contact = ({}) => {  
     return(
-        <View style={styles.div}>
             <View style={styles.view}>
                 <View>
                     {/* <Image source={}></Image> */}
                 </View>
-                    <Text style={styles.text}>123</Text>
+                    <Text style={styles.text}>{}</Text>
             </View>
-            <View style={styles.view}>
-                <View>
-                    <Image></Image>
-                </View>
-                    <Text style={styles.text}>123</Text>
-            </View>
-        </View>
     )
 }
 
@@ -34,7 +26,6 @@ const styles = StyleSheet.create({
     },
     div: {
         textAlign: "center",
-        backgroundColor: "rgb(34, 155, 192)",
        },
     image: {
         width: 50,
@@ -45,6 +36,9 @@ const styles = StyleSheet.create({
     },
     Image: {
         margin: 10,
+    },
+    color: {
+        backgroundColor: "rgb(58, 162, 226)",
     }
 })
 export default Contact

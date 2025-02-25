@@ -7,6 +7,7 @@ interface IUser {
 }
 
 export interface IUserStore {
+    idContact: IUser[]
     idUser: IUser
     addUser: (user: IUser) => void
 }
@@ -18,6 +19,7 @@ export interface UserReplece extends IUser {
 export const UserStore = create<IUserStore>()(
     persist(
       (set) => ({
+        idContact: [],
         idUser:{id:" "},
         addUser: (userId) => set((state) => ({...state ,userId: userId})),
       }),
