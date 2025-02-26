@@ -5,25 +5,20 @@ import { StyleSheet } from 'react-native';
 import { useState } from "react";
 import Input from "./Input";
 import MessageInput from "./MessageInput";
+import MessageBubble from "./MessageBubble";
 
 
-const Chat = () => {
+const MessageForm = () => {
     const [input, setInput] = useState("");
     const HandleText = (e: string) => {
 
     }
     return (
-
-<View style={styles.div}>
-            <View style={styles.View}>
-                <Text></Text>
-            </View>
-            <View style={styles.Vi}> 
-            <MessageInput value={""} onChangeText={HandleText} placeholder={""}/>
-            </View>
+        <View style={styles.form}>
+            <MessageBubble/>
+            <MessageInput value={input} onChangeText={HandleText} placeholder={"Напишите сообщение"} />
+            <TouchableOpacity></TouchableOpacity>
         </View>
-
-
     )
 }
 const styles = StyleSheet.create({
@@ -36,17 +31,14 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         color: "#000000"
     },
-    Vi: {
-            flexDirection: "row",
-            verticalAlign: "bottom",
-            
+    form: {
+        flexDirection: "row",
+        verticalAlign: "bottom",
     },
     div: {
-        borderWidth: 1,
-        borderColor: "#000000",
         backgroundColor: "rgb(58, 162, 226)",
     }
-   
+
 })
 
-export default Chat
+export default MessageForm

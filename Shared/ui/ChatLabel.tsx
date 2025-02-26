@@ -1,20 +1,12 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { ScrollView, Text, TextInput, View } from "react-native"
 import { StyleSheet } from 'react-native';
-const Chat = () => {
+
+const ChatLabel = () => {
     return (
-
-        <View style={styles.view}>
             <View style={styles.chat}>
-                <Text>12321</Text>
+                <Text>12365421</Text>
             </View>
-            <View>
-                <Text style={styles.chat}>12321</Text>
-            </View>
-
-        </View>
-
-
     )
 }
 const styles = StyleSheet.create({
@@ -22,6 +14,7 @@ const styles = StyleSheet.create({
         backgroundColor: "rgb(58, 162, 226)",
     },
     chat: {
+        backgroundColor: "rgb(58, 162, 226)",
         borderColor: "#000000",
         borderWidth: 1,
         height: 50,
@@ -44,4 +37,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default Chat
+export default ChatLabel

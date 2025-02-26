@@ -1,6 +1,8 @@
 
-import ChatScreen from "@/Shared/ui/Screen";
-import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native"
+import MessageBubble from "@/Shared/ui/MessageBubble";
+import MessageForm from "@/Shared/ui/MessageForm";
+import ChatScreen from "@/Shared/ui/MessageForm";
+import { FlatList, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native"
 import { StyleSheet } from 'react-native';
 
 
@@ -8,19 +10,21 @@ const MsgScreen = () => {
 
 return(
     
-    <View>
-   <ChatScreen/>
+    <View style={styles.View}>
+      <ScrollView>
+        <FlatList data={} renderItem={(msg) => (<MessageBubble {...msg}/>)}/>
+      </ScrollView>
+      <MessageForm />
     </View>
    
 )
 }
 const styles = StyleSheet.create({
-  Vi: {
-       height: 400,
-      
-          
+  View: {
+   
   }
 })
+
 
   export default MsgScreen
   
