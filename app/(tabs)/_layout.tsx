@@ -1,17 +1,19 @@
+import { UserStore } from '@/Entitiy/User/Store';
 import TopBar from '@/Shared/ui/TopBar';
-import { ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { router, Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 // import { StatusBar } from 'expo-status-bar';
-import { useEffect, useState } from 'react';
-import { View } from 'react-native';
-import { StyleSheet } from 'react-native';
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+import { useEffect} from 'react';
+
 
 export default function tabLayout() {
-
+  const {idUser} = UserStore();
+  const router = useRouter();
+  useEffect(() => {
+    if (!idUser.id) {
+      router.replace("/")
+    }
+  }, [])
   // const [loginId, setLoginId] = useState(false);
   // useEffect(() => {
   //   const user = false
@@ -23,7 +25,6 @@ export default function tabLayout() {
 
   return (
     <>
-
       <Stack>
         <Stack.Screen name="index" options={{ title: "Главная" }} />
         <Stack.Screen name="ChatScreen" options={{ title: "Чат" }} />

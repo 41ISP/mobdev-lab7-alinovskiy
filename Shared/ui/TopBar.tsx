@@ -16,15 +16,15 @@ const TopBar = () => {
     const Back = () => {
         router.replace('/');
     }
-return(
+    return (
 
-        <LinearGradient  colors={['#5be9aa',  '#09949d']} style={styles.View}>
-        <TouchableOpacity style={styles.dropdown} onPress={PageHistory}><Text style={styles.text}>Чаты</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.dropdown} onPress={Back}><Text style={styles.text}>Сообщения</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.dropdown} onPress={ContactScreen}><Text style={styles.text}>Контакты</Text></TouchableOpacity>
+        <LinearGradient colors={['#5be9aa', '#09949d']} style={styles.View}>
+            <TouchableOpacity style={styles.dropdown} onPress={PageHistory}><Text style={styles.text}>Чаты</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.dropdown} onPress={Back}><Text style={styles.text}>Сообщения</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.dropdown} onPress={ContactScreen}><Text style={styles.text}>Контакты</Text></TouchableOpacity>
         </LinearGradient>
-   
-)
+
+    )
 }
 
 const styles = StyleSheet.create({
@@ -50,10 +50,10 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        
+
     },
     gradient: {
-      backgroundColor: "linear-gradient(-225deg, #231557, 0%, #44107A, 29%)"  
+        backgroundColor: "linear-gradient(-225deg, #231557, 0%, #44107A, 29%)"
     }
 });
 

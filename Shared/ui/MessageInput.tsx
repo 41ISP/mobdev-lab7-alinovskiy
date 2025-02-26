@@ -6,7 +6,7 @@ interface IInput {
     placeholder: string
 }
 
-const Input = ({ value, onChangeText, placeholder }: IInput) => {
+const MessageInput = ({ value, onChangeText, placeholder }: IInput) => {
     return (
         <View>
             <TextInput placeholder={placeholder}
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#000000",
         justifyContent: "center",
-        marginTop: 10,
+   
     },
 });
-export default Input;
+export default MessageInput;

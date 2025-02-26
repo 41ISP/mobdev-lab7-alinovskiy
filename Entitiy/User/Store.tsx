@@ -20,7 +20,7 @@ export const UserStore = create<IUserStore>()(
     persist(
       (set) => ({
         idContact: [],
-        idUser:{id:" "},
+        idUser:{id:"123"},
         addUser: (userId) => set((state) => ({...state ,userId: userId})),
       }),
       {

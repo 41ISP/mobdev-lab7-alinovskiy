@@ -3,8 +3,9 @@ import { useRouter } from "expo-router";
 import { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native"
 import { StyleSheet } from 'react-native';
-const router = useRouter();
+
 const LoginScreen = () => {
+    const router = useRouter();
     const [input, setInput] = useState("");
     const handleChange = (e: string) => {
         if (input.length <= 41) {
@@ -20,7 +21,6 @@ const LoginScreen = () => {
         if (input) {
             router.replace("/(tabs)")
         }
-
     }
 
     return (
@@ -33,8 +33,8 @@ const LoginScreen = () => {
 }
 const styles = StyleSheet.create({
     dropdown: {
-        width: 100,
-        height: 30,
+ 
+  
         borderWidth: 1,
         borderColor: "#000000",
         alignItems: 'center',

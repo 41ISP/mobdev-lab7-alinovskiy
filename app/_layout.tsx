@@ -1,7 +1,7 @@
 import TopBar from '@/Shared/ui/TopBar';
 import { ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
-import { router, Stack } from 'expo-router';
+import { router, Slot, Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 // import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
@@ -16,16 +16,7 @@ export default function RootLayout() {
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
-
-  const [loginId, setLoginId] = useState(" ");
-  const {idUser} = UserStore();
   
-  useEffect(() => {
-    if (idUser.id) {
-      router.replace("/(tabs)")
-    }
-  })
-
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
@@ -37,6 +28,6 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack />
+    <Slot />
   );
 }
