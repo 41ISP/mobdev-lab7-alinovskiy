@@ -8,7 +8,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 const TopBar = () => {
     const router = useRouter();
     const PageHistory = () => {
-        router.replace('/ChatScreen');
+        router.replace('/ChatsScreen');
     }
     const ContactScreen = () => {
         router.replace('/ContactScreen');

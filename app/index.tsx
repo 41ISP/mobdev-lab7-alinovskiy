@@ -27,14 +27,14 @@ const LoginScreen = () => {
         <View>
             <Input value={input} onChangeText={handleChange}
                 placeholder={"Введите свой ID"} />
-            <TouchableOpacity style={styles.dropdown} onPress={HandleClick}></TouchableOpacity>
+            <TouchableOpacity style={styles.dropdown} onPress={HandleClick}><Text>Войти</Text></TouchableOpacity>
         </View>
     )
 }
 const styles = StyleSheet.create({
     dropdown: {
- 
-  
+        height: 40,
+        width: 100,
         borderWidth: 1,
         borderColor: "#000000",
         alignItems: 'center',

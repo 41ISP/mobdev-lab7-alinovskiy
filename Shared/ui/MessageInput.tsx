@@ -8,12 +8,10 @@ interface IInput {
 
 const MessageInput = ({ value, onChangeText, placeholder }: IInput) => {
     return (
-        <View>
-            <TextInput placeholder={placeholder}
-                value={value}
-                onChangeText={onChangeText}
-                style={styles.Input} />
-        </View>
+        <TextInput placeholder={placeholder}
+            value={value}
+            onChangeText={onChangeText}
+            style={styles.Input} />
     )
 }
 const styles = StyleSheet.create({
@@ -23,7 +21,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#000000",
         justifyContent: "center",
-   
+        flexDirection: "row",
+        verticalAlign: "bottom",
+
+
     },
 });
 export default MessageInput;
