@@ -17,7 +17,7 @@ const MessageForm = () => {
         <View style={styles.form}>
             <MessageBubble/>
             <MessageInput value={input} onChangeText={HandleText} placeholder={"Напишите сообщение"} />
-            <TouchableOpacity></TouchableOpacity>
+            <TouchableOpacity style={styles.button}></TouchableOpacity>
         </View>
     )
 }
@@ -37,6 +37,13 @@ const styles = StyleSheet.create({
     },
     div: {
         backgroundColor: "rgb(58, 162, 226)",
+    },
+    button: {
+        width: 60,
+        height: 45,
+        borderWidth: 1,
+        borderColor: "#00000",
+        marginLeft: 5,
     }
 
 })
