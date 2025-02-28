@@ -2,6 +2,7 @@ import { UserStore } from "@/Entitiy/User/Store";
 import { Image, Text, View } from "react-native";
 import { StyleSheet } from 'react-native';
 
+const {idContact} = UserStore()
 
 const ContactLabel = ({}) => {  
     return(
@@ -9,7 +10,7 @@ const ContactLabel = ({}) => {
                 <View>
                     {/* <Image source={}></Image> */}
                 </View>
-                    <Text style={styles.text}>{}</Text>
+                    {/* <Text style={styles.text}>{idContact.id}</Text> */}
             </View>
     )
 }

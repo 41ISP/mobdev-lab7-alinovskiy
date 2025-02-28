@@ -7,8 +7,9 @@ interface IUser {
 }
 
 export interface IUserStore {
+    idMessage: IUser[]
     idContact: IUser[]
-    idUser: IUser
+    idUser: IUser[]
     addUser: (user: IUser) => void
 }
 
@@ -20,7 +21,8 @@ export const UserStore = create<IUserStore>()(
     persist(
       (set) => ({
         idContact: [],
-        idUser:{id:"123"},
+        idMessage: [],
+        idUser:[],
         addUser: (userId) => set((state) => ({...state ,userId: userId})),
       }),
       {

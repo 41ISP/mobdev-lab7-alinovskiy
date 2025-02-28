@@ -1,6 +1,4 @@
 import ContactLabel from "@/Shared/ui/ContactLabel"
-
-import TopBar from "@/Shared/ui/TopBar"
 import { View , Text, ScrollView} from "react-native"
 import { StyleSheet } from 'react-native';
 
