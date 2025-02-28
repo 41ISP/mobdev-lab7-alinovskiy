@@ -15,10 +15,10 @@ const MessageForm = () => {
     }
     return (
         <View style={styles.form}>
-            <MessageBubble/>
+
             <MessageInput value={input} onChangeText={HandleText} placeholder={"Напишите сообщение"} />
             <TouchableOpacity style={styles.button}></TouchableOpacity>
-        </View>
+            </View>
     )
 }
 const styles = StyleSheet.create({
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
     },
     form: {
         flexDirection: "row",
-        verticalAlign: "bottom",
     },
     div: {
         backgroundColor: "rgb(58, 162, 226)",
@@ -44,6 +43,11 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#00000",
         marginLeft: 5,
+    },
+    input: {
+        flexDirection: "row",
+        alignSelf: "center",
+        
     }
 
 })

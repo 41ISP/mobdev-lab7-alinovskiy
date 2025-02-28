@@ -10,7 +10,7 @@ export default function tabLayout() {
   const {idUser} = UserStore();
   const router = useRouter();
   useEffect(() => {
-    if (!idUser.id) {
+    if (!idUser) {
       router.replace("/")
     }
   }, [])

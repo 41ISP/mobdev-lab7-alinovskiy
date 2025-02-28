@@ -16,23 +16,26 @@ const MsgScreen = () => {
   //   fetchMovie();
   // }, []);
 
-return(
-    
-    <View style={styles.View}>
-      <ScrollView>
+  return (
+
+    <View style={styles.view}>
+      <ScrollView style={styles.msgContainer}>
+        <MessageBubble/>
         {/* <FlatList data={} renderItem={(msg) => (<MessageBubble {...msg}/>)}/> */}
       </ScrollView>
       <MessageForm />
     </View>
-   
-)
+
+  )
 }
 const styles = StyleSheet.create({
-  View: {
-   
+  view: {
+    height: "100%"
+  },
+  msgContainer: {
+    height: "100%"
   }
 })
 
 
-  export default MsgScreen
-  
+export default MsgScreen

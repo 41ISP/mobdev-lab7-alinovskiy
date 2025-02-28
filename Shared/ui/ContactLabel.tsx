@@ -2,9 +2,9 @@ import { UserStore } from "@/Entitiy/User/Store";
 import { Image, Text, View } from "react-native";
 import { StyleSheet } from 'react-native';
 
-const {idContact} = UserStore()
 
 const ContactLabel = ({}) => {  
+
     return(
             <View style={styles.view}>
                 <View>
